@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo de Adivinhação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="regrasJogo">
+  <h2>Regras do Jogo</h2>
+  <ul>
+    <li>O número secreto está entre 1 e 100.</li>
+    <li>Você escolhe o número de tentativas antes de começar.</li>
+    <li>Receberá dicas se o número é maior ou menor.</li>
+  </ul>
+  </aside>
+ 
+  <aside id="dicasEstrategia">
+  <h2>Dicas de Estratégia</h2>
+  <ul>
+    <li>Use o método da "divisão por dois" (palpite no meio do intervalo).</li>
+    <li>Reduza o intervalo com base nas dicas "maior" ou "menor".</li>
+    <li>Evite repetir números já tentados.</li>
+  </ul>
+  </aside>
+  <div class="container">
+    <h1>Jogo de Adivinhação</h1>
+    <h2>selecione a quantidade de tentativas</h2>
+    <select name="tentativas" id="seleTentativas">
+      <option value="7">7 tentativas -difícil-</option>
+      <option value="10">10 tentativas -médio-</option>
+      <option value="15">15 tentativas -fácil-</option>
+  
+    </select>
+    <button onclick="defineTentativas()">ok</button>
+    <p>Digite um número entre 1 e 100:</p>
+    <input type="number" id="entrada" min="1" max="100">
+    <button onclick= "verificarPalpite()" >Chutar</button>
+    <p id="mensagem"></p>
+    <p id="tentativas"></p>
+    <button onclick="reiniciarJogo()">Reiniciar</button>
+    <p></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
